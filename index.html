@@ -43,8 +43,13 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Navigation */
@@ -74,12 +79,32 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            font-size: 1.2rem;
             font-weight: 700;
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .logo img {
+            height: 40px;
+            /* adjust size for navbar */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .25));
+            transition: transform 0.2s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -460,6 +485,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -498,10 +524,13 @@
 </head>
 <body>
     <div class="bg-animation"></div>
-    
+
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">RAM</div>
+            <div class="logo">
+                <img src="public/logo.png" alt="ram sevak mishra" />
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -516,7 +545,8 @@
         <div class="hero-content">
             <h1>Ram Sevak Mishra</h1>
             <p class="subtitle">Full Stack Developer</p>
-            <p>Passionate developer with 3.9+ years of experience crafting modern web applications. Specialized in React, Node.js, and cloud technologies, turning ideas into scalable digital solutions.</p>
+            <p>Passionate developer with 3.9+ years of experience crafting modern web applications. Specialized in
+                React, Node.js, and cloud technologies, turning ideas into scalable digital solutions.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -531,7 +561,8 @@
             <div class="company-duration">Mach-X Private Limited • June 2021 – Mar 2024</div>
             <ul class="achievements">
                 <li>Developed comprehensive web user interfaces and robust APIs powering critical applications</li>
-                <li>Created intelligent parsers to convert PDF files into Excel format, streamlining data processing</li>
+                <li>Created intelligent parsers to convert PDF files into Excel format, streamlining data processing
+                </li>
                 <li>Built advanced email data extraction parser, automating information retrieval workflows</li>
                 <li>Managed application lifecycles ensuring 99.9% uptime and high availability across all platforms</li>
                 <li>Architected scalable solutions using modern cloud infrastructure and microservices</li>
@@ -555,7 +586,8 @@
                 <div class="project-title">Electronics E-Commerce Website</div>
                 <span class="project-status status-ongoing">Ongoing</span>
                 <p class="project-description">
-                    Modern e-commerce platform migration from React to Next.js, focusing on performance optimization and SEO enhancement. Implementing server-side rendering and advanced routing capabilities.
+                    Modern e-commerce platform migration from React to Next.js, focusing on performance optimization and
+                    SEO enhancement. Implementing server-side rendering and advanced routing capabilities.
                 </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Next.js</span>
@@ -571,7 +603,8 @@
                 <div class="project-title">GitHub File Management Tool</div>
                 <span class="project-status status-completed">Completed</span>
                 <p class="project-description">
-                    Efficient Node.js application for selective file operations in GitHub repositories, eliminating the need for full repository cloning. Features secure API integration and file system management.
+                    Efficient Node.js application for selective file operations in GitHub repositories, eliminating the
+                    need for full repository cloning. Features secure API integration and file system management.
                 </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Node.js</span>
@@ -580,14 +613,16 @@
                     <span class="tech-tag">Git</span>
                 </div>
                 <br><br>
-                <a href="https://github.com/ram8545/file_pull_push_from_github" class="project-link" target="_blank">View on GitHub →</a>
+                <a href="https://github.com/ram8545/file_pull_push_from_github" class="project-link"
+                    target="_blank">View on GitHub →</a>
             </div>
 
             <div class="project-card fade-in-up">
                 <div class="project-title">E-Commerce Website UI</div>
                 <span class="project-status status-completed">Completed</span>
                 <p class="project-description">
-                    Fully responsive e-commerce interface with dynamic navigation, cart management, and user authentication. Features engaging hero sections and seamless user experience across all devices.
+                    Fully responsive e-commerce interface with dynamic navigation, cart management, and user
+                    authentication. Features engaging hero sections and seamless user experience across all devices.
                 </p>
                 <div class="tech-stack">
                     <span class="tech-tag">React.js</span>
@@ -596,14 +631,17 @@
                     <span class="tech-tag">CSS3</span>
                 </div>
                 <br><br>
-                <a href="https://github.com/ram8545/E-commerce" class="project-link" target="_blank">View on GitHub →</a>
+                <a href="https://github.com/ram8545/E-commerce" class="project-link" target="_blank">View on GitHub
+                    →</a>
             </div>
 
             <div class="project-card fade-in-up">
                 <div class="project-title">Healthcare Inventory Management System</div>
                 <span class="project-status status-completed">Completed</span>
                 <p class="project-description">
-                    Comprehensive system for healthcare organizations managing procurement, inventory, orders, and billing. Integrated modules providing automated business process management with REST API architecture.
+                    Comprehensive system for healthcare organizations managing procurement, inventory, orders, and
+                    billing. Integrated modules providing automated business process management with REST API
+                    architecture.
                 </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Laravel</span>
@@ -613,7 +651,8 @@
                     <span class="tech-tag">JavaScript</span>
                 </div>
                 <br><br>
-                <a href="https://github.com/ram8545/Pharma_Project" class="project-link" target="_blank">View on GitHub →</a>
+                <a href="https://github.com/ram8545/Pharma_Project" class="project-link" target="_blank">View on GitHub
+                    →</a>
             </div>
         </div>
     </section>
@@ -687,7 +726,8 @@
 
     <footer>
         <p>&copy; 2025 Ram Sevak Mishra. Crafted with passion and code.</p>
-        <p><strong>Education:</strong> B.Tech. Computer Science & Engineering, Kashi Institute Of Technology, Varanasi (AKTU) • CGPA: 6.82</p>
+        <p><strong>Education:</strong> B.Tech. Computer Science & Engineering, Kashi Institute Of Technology, Varanasi
+            (AKTU) • CGPA: 6.82</p>
     </footer>
 
     <script>
@@ -748,9 +788,9 @@
             particle.style.left = Math.random() * window.innerWidth + 'px';
             particle.style.top = window.innerHeight + 'px';
             particle.style.opacity = '0.7';
-            
+
             document.body.appendChild(particle);
-            
+
             const animation = particle.animate([
                 { transform: 'translateY(0px)', opacity: 0.7 },
                 { transform: 'translateY(-' + (window.innerHeight + 100) + 'px)', opacity: 0 }
@@ -758,7 +798,7 @@
                 duration: Math.random() * 3000 + 2000,
                 easing: 'linear'
             });
-            
+
             animation.onfinish = () => {
                 particle.remove();
             };
@@ -771,7 +811,7 @@
         const subtitle = document.querySelector('.hero .subtitle');
         const text = 'Full Stack Developer';
         let index = 0;
-        
+
         function typeWriter() {
             if (index < text.length) {
                 subtitle.textContent = text.slice(0, index + 1);
@@ -779,7 +819,7 @@
                 setTimeout(typeWriter, 100);
             }
         }
-        
+
         // Start typing effect after page load
         window.addEventListener('load', () => {
             setTimeout(() => {
